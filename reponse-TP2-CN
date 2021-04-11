@@ -1,0 +1,94 @@
+EXO 1 :
+1 : il est de 1 (source : cours p23)
+
+2 : Oui (source : cours(confirmer par wiki))
+
+3 : n = 2^r - 1 et k = n - r.
+k = 2^r - 1 - r
+r = ? 
+
+4 : je crois qu'il y a une erreur n = 2k - 1 n'est pas dans le cours
+
+5 : 1 (source : cours)
+
+6 et 8 : On donne la matrice génétratice du code [7,4] :
+( 1 0 0 0 1 1 0 ) = G
+( 0 1 0 0 1 0 1 )
+( 0 0 1 0 0 1 1 )
+( 0 0 0 1 1 1 1 )
+Ainsi pour m = m1m2m3m4, mG = m1m2m3m4c1c2c3 avec c1 = m1 + m2 + m4 , c2 = m1 + m3 + m4 et c3 = m2 + m3 + m4. 
+c1 , c2 et c3 seront placé aux positions correspondant au puissance de 2 : c1 = x001 , c2 = x010 et c3 = x100
+
+7 : faisant un xor de tout les positions des 1 du message reçu , si c'est 0 , parfait , si c'est pas 0 avec le resultat est la postions de l'erreur. ou plus simplement avec un matrice de controle
+
+9 : 
+H^t =
+( 0 0 1 )
+( 0 1 0 )
+( 0 1 1 )
+( 1 0 0 )
+( 1 0 1 )
+( 1 1 0 )
+( 1 1 1 )
+
+H = 
+( 0 0 0 1 1 1 1 )
+( 0 1 1 0 0 1 1 )
+( 1 0 1 0 1 0 1 )
+
+10 : codeur.c (faux (n'est valide que pour [7,4]))
+
+11 :
+- 0000 -> [7,4] -> 0000000
+- 1111 -> [7,4] -> 1111111
+- 1011 -> [7,4] -> 
+- 10101010101 -> [?,11] -> ?
+- 11110000101 -> [?,11] -> ?
+
+12 : pas fait
+
+13 : pas fait
+
+
+
+
+
+EXO 2 :
+
+1 : Oui
+
+2 : Un code linéaire C est dit cyclique s’il est invariant par permutation
+circulaire
+
+3 : 10011101 -> X⁷+X⁴+X³+X²+1
+
+4 : 4
+
+5 : R(X) = X³ -> 1000
+Ainsi : 10011101|1000
+
+6 : X^11+X⁸+X⁷+X⁶+X⁴+X³ modulo X⁴+X²+X+1 = 0
+
+7 : Oui , car le coefficient constant est 1
+
+8 : Oui car G(X) ne divise pas aucun polynome Xt+1 aevec 0 <= t <= n-1
+
+9 : Oui, car G(X) est divisible par X+1 
+
+10 : Oui car deg(G(X)) = 4.
+
+11 : CRC.c
+
+12 :
+- 11001101 -> 110011010010
+- 10101011 -> 101010111011
+- 00110101 -> 001101011010
+
+13 : verifCRC.c
+
+14 : 
+- 11001101 -> 110011010010 -> C'EST BON
+- 10101011 -> 101010111011 -> C'EST BON
+- 00110101 -> 001101011010 -> C'EST BON
+- 10001101000 -> IL Y A UNE ERREUR !!
+- 11101011101 -> IL Y A UNE ERREUR !!
