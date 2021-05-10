@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 
-#define TAILLE_MSG 4
+#define TAILLE_MSG 8
 
 #define NB_STATE 4
 
