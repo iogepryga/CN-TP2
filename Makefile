@@ -5,10 +5,10 @@ OBJ=$(SRC:.c=.o)
 all : $(PROG)
 
 $(PROG) : $(OBJ)
-	gcc -g -O0 -Wall -o $@ $@.o
+	gcc -g -Wall -o $@ $@.o
 
 %.o : %.c
-	gcc -g -O0 -Wall -c $<
+	gcc -g -Wall -c $<
 	
 clean :
 	rm -f *.o $(PROG)

@@ -55,14 +55,22 @@ int main(int argc, char **argv) {
   printf("m = %d , k = %d , n = %d\n",m,k,n);
 
 
-  char* C = (char*)malloc(sizeof(char)*(n));
+  int* C = (int*)malloc(sizeof(int)*(n));
 
-  for(int i = 0 ; i < m ; i++) {
-    for(int j = i ; j < n ; j++) {
-      if(   (   (    j<<(m-i)     )      >>m       )        <<i !=0  )
-        C[puissance_de_2(i)-1] ^= inttocarac(   caractoint(  C[puissance_de_2(i)-1]  ) ^ caractoint(C[j])    );
-    }
-  }
+
+
+
+
+
+
+
+
+  // for(int i = 0 ; i < m ; i++) {
+  //   for(int j = i ; j < n ; j++) {
+  //     if(   (   (    j<<(m-i)     )      >>m       )        <<i !=0  )
+  //       C[puissance_de_2(i)-1] ^= inttocarac(   caractoint(  C[puissance_de_2(i)-1]  ) ^ caractoint(C[j])    );
+  //   }
+  // }
 
   
   

@@ -36,7 +36,7 @@ H =
 ( 0 1 1 0 0 1 1 )
 ( 1 0 1 0 1 0 1 )
 
-10 : codeur.c (faux (n'est valide que pour [7,4]))
+10 : hamming_codeur.c (faux (n'est valide que pour [7,4]))
 
 11 :
 - 0000 -> [7,4] -> 0000000
