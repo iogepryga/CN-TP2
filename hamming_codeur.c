@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define caractobin(c) (c-'0')
-#define bintocarac(c) (c+'0')
+int caractoint(char c){
+  return (c-(int)'0');
+}
+
+char inttocarac(int c) {
+  return (c+(int)'0');
+}
 
 int string_length(char *s) {
   int result = 0;
@@ -54,15 +59,12 @@ int main(int argc, char **argv) {
 
   for(int i = 0 ; i < m ; i++) {
     for(int j = i ; j < n ; j++) {
-      if(   ((j<<(m-i))>>m)<<i     ) {
-        C[puissance_de_2(i)-1] ^= bintocarac(caractobin(C[puissance_de_2(i)-1]) ^ caractobin(C[j]));
-      }
+      if(   (   (    j<<(m-i)     )      >>m       )        <<i !=0  )
+        C[puissance_de_2(i)-1] ^= inttocarac(   caractoint(  C[puissance_de_2(i)-1]  ) ^ caractoint(C[j])    );
     }
   }
 
-  for (int i = 0; i < n; i++)
-    printf("%c",C[i]);
-  printf("\n");
+  
   
     
 
@@ -81,6 +83,10 @@ int main(int argc, char **argv) {
   // }
   // printf("\n");
   // free(G);
+
+  for (int i = 0; i < n; i++)
+    printf("%c",C[i]);
+  printf("\n");
 
   free(C);
 }
